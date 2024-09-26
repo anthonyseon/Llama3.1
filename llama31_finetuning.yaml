@@ -3,7 +3,7 @@ description: A template Run for inference of Llama31-finetuning with streamlit a
 import:
   /code/:
     git:
-      url: github.com/anthonyseon/Llama31.git
+      url: github.com/anthonyseon/Llama3.1.git
       ref: main
   /model/: vessl-model://tecace/llama-3.1-8b-counselor/1
 resources:
