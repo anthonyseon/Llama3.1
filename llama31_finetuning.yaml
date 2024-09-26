@@ -1,0 +1,28 @@
+name: Llama31-finetuning-streamlit-Multi-Model
+description: A template Run for inference of Llama31-finetuning with streamlit app
+service_account_name: ""
+termination_protection: false
+import:
+  /code/:
+    git:
+      url: https://github.com/anthonyseon/Llama31.git
+      ref: main
+  /model/: vessl-model://tecace/llama-3.1-8b-counselor/1
+resources:
+  cluster: vessl-gcp-oregon
+  preset: gpu-l4-small
+image: quay.io/vessl-ai/hub:torch2.1.0-cuda12.2-202312070053
+run:
+  - command: |-
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      streamlit run llama31_finetuning_streamlit.py --server.port=80
+    workdir: /code
+interactive:
+  max_runtime: 24h
+  jupyter:
+    idle_timeout: 120m
+ports:
+  - name: streamlit
+    type: http
+    port: 80
