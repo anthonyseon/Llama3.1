@@ -5,8 +5,8 @@ import torch
 # Load the model and tokenizer
 @st.cache_resource
 def load_model():
-    model = LlamaForCausalLM.from_pretrained("vessl-model://tecace/llama-3.1-8b-counselor/1")
-    tokenizer = LlamaTokenizer.from_pretrained("vessl-model://tecace/llama-3.1-8b-counselor/1")
+    model = LlamaForCausalLM.from_pretrained("tecace/llama-3.1-8b-counselor")  # Vessl에서 모델 경로
+    tokenizer = LlamaTokenizer.from_pretrained("tecace/llama-3.1-8b-counselor")  # Vessl에서 토크나이저 경로
     return model, tokenizer
 
 model, tokenizer = load_model()
