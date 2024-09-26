@@ -4,8 +4,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # Load the model and tokenizer
 @st.cache_resource
 def load_model():
-    model = AutoModelForCausalLM.from_pretrained("tecace/llama-3.1-8b-counselor/1")
-    tokenizer = AutoTokenizer.from_pretrained("tecace/llama-3.1-8b-counselor/1")
+    model = AutoModelForCausalLM.from_pretrained("tecace/llama-3.1-8b-counselor")
+    tokenizer = AutoTokenizer.from_pretrained("tecace/llama-3.1-8b-counselor")
     return model, tokenizer
 
 model, tokenizer = load_model()
