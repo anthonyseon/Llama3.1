@@ -1,4 +1,4 @@
-name: Llama31-finetuning-streamlit-Multi-Model
+name: Llama31-finetuning-streamlit
 description: A template Run for inference of Llama31-finetuning with streamlit app
 import:
   /code/:
