@@ -1,11 +1,9 @@
 name: Llama31-finetuning-streamlit-Multi-Model
 description: A template Run for inference of Llama31-finetuning with streamlit app
-service_account_name: ""
-termination_protection: false
 import:
   /code/:
     git:
-      url: https://github.com/anthonyseon/Llama31.git
+      url: github.com/anthonyseon/Llama31.git
       ref: main
   /model/: vessl-model://tecace/llama-3.1-8b-counselor/1
 resources:
